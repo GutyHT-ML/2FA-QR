@@ -20,4 +20,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/test', 'Auth\LoginController@testRead');
+
+Route::post('/test', 'Auth\LoginController@testSave');
+
+Route::post('/hola', 'DoSpacesController@store')->name('upload');
+
+Route::get('/do', 'DoSpacesController@test');
+
+Route::get('/do', 'DoSpacesController@test2');
+
 Route::get('/home', 'HomeController@index')->name('home');
